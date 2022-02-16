@@ -1,7 +1,6 @@
 package tests;
 
-import com.codeborne.selenide.Configuration;
-import org.junit.jupiter.api.BeforeAll;
+
 import org.junit.jupiter.api.Test;
 import pages.RegistrationPage;
 
@@ -15,7 +14,7 @@ public class RegistrationFormTestsFull extends TestBase {
     String userNumber = "1234567890";
     String userDay = "9";
     String userMonth = "August";
-    String userYear ="1977";
+    String userYear = "1977";
     String userSubject = "hindi";
     String userFile = "raja.jpg";
     String userHobby_1 = "Sports";
@@ -33,7 +32,7 @@ public class RegistrationFormTestsFull extends TestBase {
                 .setUserEmail(userEmail)
                 .clickGenderRadio()
                 .setUserNumber(userNumber)
-                .setBirthDate(userDay , userMonth , userYear)
+                .setBirthDate(userDay, userMonth, userYear)
                 .setSubjectInput(userSubject)
                 .clickFirstHobbies()
                 .clickOneMoreHobbies()
@@ -42,11 +41,11 @@ public class RegistrationFormTestsFull extends TestBase {
                 .selectStateDropdown()
                 .selectCityDropdown()
                 .clickSubmitButton()
-                .checkForm("Student Name", firstName +" "+ lastName)
+                .checkForm("Student Name", firstName + " " + lastName)
                 .checkForm("Student Email", userEmail)
                 .checkForm("Gender", userGender)
                 .checkForm("Mobile", userNumber)
-                .checkForm("Date of Birth", userDay +" "+  userMonth +","+ userYear)
+                .checkForm("Date of Birth", userDay + " " + userMonth + "," + userYear)
                 .checkForm("Subjects", userSubject)
                 .checkForm("Hobbies", userHobby_1 + ", " + userHobby_2)
                 .checkForm("Address", userAddress)
